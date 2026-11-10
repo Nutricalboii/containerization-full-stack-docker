@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f6f3" />
+    <meta name="description" content="A full-stack Docker Compose learning project." />
+    <title>StackLab — Project 07</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="StackLab home"><span class="brand-mark">S</span><span>stacklab<span class="brand-period">.</span></span></a>
+        <div class="topbar-meta"><span class="project-chip">DEVOPS PROJECT <b>07</b></span><span class="live-status"><i></i><span id="connection-label">Connecting</span></span></div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> FULL STACK · DOCKER COMPOSE</p>
+            <h1>Everything in<br /><em>its own box.</em></h1>
+            <p class="hero-description">A complete application, split into containers that work together. Add a task, follow it through the API, and watch it persist in PostgreSQL.</p>
+            <div class="architecture-pills" aria-label="Application components">
+              <span><i class="pill-dot dot-web"></i>Frontend</span><b>→</b><span><i class="pill-dot dot-api"></i>API</span><b>→</b><span><i class="pill-dot dot-db"></i>PostgreSQL</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="node node-web"><span class="node-symbol">▧</span><span>WEB</span></div>
+            <div class="node node-api"><span class="node-symbol">⌘</span><span>API</span></div>
+            <div class="node node-db"><span class="node-symbol">▤</span><span>DATA</span></div>
+            <div class="hero-center"><span>07</span><small>STACK</small></div>
+            <span class="orbit-label label-top">ISOLATED SERVICES</span><span class="orbit-label label-bottom">ONE PORTABLE STACK</span>
+          </div>
+        </section>
+
+        <section class="board-section" aria-labelledby="board-title">
+          <div class="section-heading">
+            <div><p class="eyebrow section-eyebrow">YOUR WORKSPACE</p><h2 id="board-title">Containerization board</h2></div>
+            <span class="persist-label"><span class="persist-icon">↻</span> Saved to PostgreSQL</span>
+          </div>
+
+          <div class="stats-grid" aria-label="Task summary">
+            <article class="stat-card"><span class="stat-icon icon-total">◫</span><span class="stat-label">TOTAL TASKS</span><strong id="total-count">—</strong><span class="stat-foot">across the stack</span></article>
+            <article class="stat-card"><span class="stat-icon icon-open">◷</span><span class="stat-label">IN PROGRESS</span><strong id="open-count">—</strong><span class="stat-foot">ready for a container</span></article>
+            <article class="stat-card"><span class="stat-icon icon-done">✓</span><span class="stat-label">COMPLETED</span><strong id="done-count">—</strong><span class="stat-foot">shipped and stored</span></article>
+            <article class="stat-card stat-card-accent"><span class="stat-icon icon-db">⌑</span><span class="stat-label">DATABASE</span><strong class="db-state" id="database-state">Checking</strong><span class="stat-foot">persistent volume active</span></article>
+          </div>
+
+          <div class="board-layout">
+            <section class="task-panel" aria-label="Task list">
+              <div class="panel-header"><div><h3>Project tasks</h3><p>Small steps, separate services.</p></div><span class="task-count" id="task-count">0 TASKS</span></div>
+              <div id="task-list" class="task-list" aria-live="polite"><div class="loading-state"><span class="spinner"></span> Connecting to your stack…</div></div>
+            </section>
+            <aside class="add-panel">
+              <div class="add-panel-heading"><span class="add-icon">+</span><div><h3>Add a task</h3><p>Persist it in the database.</p></div></div>
+              <form id="task-form">
+                <label for="task-title">TASK NAME <span>*</span></label>
+                <input id="task-title" name="title" type="text" maxlength="120" placeholder="e.g. Measure cold start" required />
+                <label for="task-description">NOTES <small>OPTIONAL</small></label>
+                <textarea id="task-description" name="description" maxlength="500" rows="4" placeholder="What do you want to explore?"></textarea>
+                <button class="submit-button" type="submit"><span>Add to board</span><b>↗</b></button>
+                <p id="form-message" class="form-message" role="status"></p>
+              </form>
+              <div class="form-footnote"><span>↳</span> Written through the API and stored in PostgreSQL</div>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer"><span>STACKLAB <b>·</b> PROJECT 07</span><span>Frontend <i></i> API <i></i> PostgreSQL</span><a href="/api/health" target="_blank" rel="noreferrer">VIEW API HEALTH ↗</a></footer>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,17 @@
+{
+  "name": "stacklab-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "REST API for the StackLab Docker Compose project",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "pg": "8.23.1"
+  }
+}
+
